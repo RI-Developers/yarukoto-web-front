@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!--
+  Copyright (c) 2014, RI-Developer. All rights reserved.
+-->
+
+<html ng-app>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO</title>
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="packages/web_components/platform.js"></script>
+  <script src="packages/web_components/dart_support.js"></script>
+</head>
+
+<body>
+
+<form action="">
+  <input type="hidden" name="author_name" value="foo" />
+  <div class="content">
+    <input type="text" name="title" />
+  </div>
+  <div class="date">
+    <span>開始予定時刻: <input type="text" name="s_s_date" /></span>
+    <span>終了予定時刻: <input type="text" name="s_f_date" /></span>
+  </div>
+  <input type="submit" name="submit" value="submit"/>
+</form>
+
+
+<todo-list ng-cloak>
+</todo-list>
+
+<script type="application/dart" src="main.dart"></script>
+<script type="text/javascript" src="packages/browser/dart.js"></script>
+</body>
+</html>
