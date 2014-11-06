@@ -2,7 +2,7 @@
   "result": true,
   "todos": [
     {
-      "_id": " gromg498tqdw22fexfj",
+      "_id": "gromg498tqdw22fexfj",
       "author_name": "Magnum",
       "title": "TODOテスト",
       "c_date": "2014/12/1/10:25",
@@ -11,7 +11,7 @@
       "finished": false
     },
     {
-      "_id": " 3kfdmldvgrrflnferk39eld",
+      "_id": "3kfdmldvgrrflnferk39eld",
       "author_name": "パンダ",
       "title": "TODOテスト",
       "c_date": "2014/11/1/10:25",
@@ -21,7 +21,7 @@
       "finished": true
     },
     {
-      "_id": " 3kfdmldvfeewlnferk39eld",
+      "_id": "3kfdmldvfeewlnferk39eld",
       "author_name": "パンダ",
       "title": "TODOテスト",
       "c_date": "2014/11/1/10:25",
@@ -31,7 +31,7 @@
       "finished": true
     },
     {
-      "_id": " 3cdcckfdmldvlswfegrnferk39eld",
+      "_id": "3cdcckfdmldvlswfegrnferk39eld",
       "author_name": "パンダ",
       "title": "TODOテスト",
       "c_date": "2014/11/1/10:25",
@@ -41,7 +41,7 @@
       "finished": true
     },
     {
-      "_id": " 3kfdmldvswqwqlnferk39eld",
+      "_id": "3kfdmldvswqwqlnferk39eld",
       "author_name": "パ",
       "title": "TODOテスト",
       "c_date": "2014/11/1/10:25",

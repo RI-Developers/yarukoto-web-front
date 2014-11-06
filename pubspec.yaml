@@ -12,6 +12,9 @@ dependencies:
   angular: '>=1.0.0 <2.0.0'
   web_components: any
 dependency_overrides:
+  hop: '>=0.27.0'
+  dartmocks: any
+  unittest: any
   code_transformers: '>=0.2.3+1 <0.3.0'
   html5lib: '>=0.12.0 <0.13.0'
   barback: '>=0.15.2+2 <0.16.0'
