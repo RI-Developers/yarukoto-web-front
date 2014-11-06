@@ -5,10 +5,10 @@ class Todo {
   String author_name;
   String title;
   bool finished;
-  String c_date = null;
-  String s_s_date = null;
-  String s_f_date = null;
-  String f_date = 'aaaa';
+  String c_date;
+  String s_s_date;
+  String s_f_date;
+  String f_date;
 
   Todo(this.id, this.author_name, this.title, this.finished,
        this.c_date, this.s_s_date, this.s_f_date, this.f_date);
