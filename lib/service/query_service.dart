@@ -8,6 +8,7 @@ import 'package:angular/angular.dart';
 @Injectable()
 class QueryService {
   String _todoUrl = 'todo.json';
+  bool _result = false;
 
   Future _loaded;
 
@@ -22,12 +23,20 @@ class QueryService {
   Future _loadTodo() {
     return _http.get(_todoUrl)
     .then((HttpResponse response) {
+      _result = response.data["result"];
+
       _todoCache = new Map<String, Todo>();
-      for (Map todo in response.data) {
-        Todo r = new Todo.fromJson(todo);
-//        print(r);
-        _todoCache[r.id] = r;
+
+      if(_result) {
+
+        List<Todo> todoList = response.data["todos"];
+        for (Map todo in todoList) {
+          Todo t = new Todo.fromJson(todo);
+          _todoCache[t.id] = t;
+        }
+
       }
+
     });
   }
 
