@@ -26,29 +26,31 @@
   <meta name="msapplication-TileColor" content="#3372DF">
 
   <link rel="stylesheet" href="styles/main.css">
+
   <script src="packages/web_components/platform.js"></script>
   <script src="packages/web_components/dart_support.js"></script>
+
 </head>
 
-<body>
+<body class="">
+    <form action="">
+      <input type="hidden" name="author_name" value="foo" />
+      <div class="content">
+        <input type="text" name="title" />
+      </div>
+      <div class="date">
+        <span>開始予定時刻: <input type="text" name="s_s_date" /></span>
+        <span>終了予定時刻: <input type="text" name="s_f_date" /></span>
+      </div>
+      <input type="submit" name="submit" value="submit"/>
+    </form>
 
-<form action="">
-  <input type="hidden" name="author_name" value="foo" />
-  <div class="content">
-    <input type="text" name="title" />
+
+    <todo-list ng-cloak>
+    </todo-list>
+
+    <script type="application/dart" src="main.dart"></script>
+    <script type="text/javascript" src="packages/browser/dart.js"></script>
   </div>
-  <div class="date">
-    <span>開始予定時刻: <input type="text" name="s_s_date" /></span>
-    <span>終了予定時刻: <input type="text" name="s_f_date" /></span>
-  </div>
-  <input type="submit" name="submit" value="submit"/>
-</form>
-
-
-<todo-list ng-cloak>
-</todo-list>
-
-<script type="application/dart" src="main.dart"></script>
-<script type="text/javascript" src="packages/browser/dart.js"></script>
 </body>
 </html>

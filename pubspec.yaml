@@ -11,6 +11,8 @@ dependencies:
   sass: any
   angular: '>=1.0.0 <2.0.0'
   web_components: any
+  angular_ui: any
+  angular_dart_ui_bootstrap: '>=0.0.1'
 dependency_overrides:
   hop: '>=0.27.0'
   dartmocks: any
