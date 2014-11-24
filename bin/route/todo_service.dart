@@ -4,7 +4,6 @@ import 'package:redstone/server.dart' as app;
 import 'package:mongo_dart/mongo_dart.dart';
 
 import '../utils/authorization.dart';
-import '../utils/utils.dart';
 
 //A private service. Only authenticated users with the 'ADMIN' role
 //can view the list of registered users

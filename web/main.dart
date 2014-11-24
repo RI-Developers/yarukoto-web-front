@@ -23,13 +23,6 @@ class YarukotoAppModule extends Module {
   }
 }
 
-class TodoRegisterModule extends Module {
-  TodoRegisterModule() {
-    bind(QueryService);
-    bind(TodoRegisterFormComponent);
-  }
-}
-
 void main() {
   Logger.root
     ..level = Level.FINEST
