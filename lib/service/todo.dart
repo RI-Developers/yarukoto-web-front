@@ -10,8 +10,19 @@ class Todo {
   String s_f_date;
   String f_date;
 
+
   Todo(this.id, this.author_name, this.title, this.finished,
        this.c_date, this.s_s_date, this.s_f_date, this.f_date);
+
+  Todo.empty() {
+    author_name = '';
+    title = '';
+    finished = false;
+    c_date = '';
+    s_s_date = '';
+    s_f_date = '';
+    f_date = '';
+  }
 
   Map<String, dynamic> toJson() => <String, dynamic>{
     "id": id,

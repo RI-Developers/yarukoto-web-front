@@ -7,7 +7,10 @@ import 'package:angular/angular.dart';
 
 @Injectable()
 class QueryService {
-  String _todoUrl = 'todo.json';
+
+  final String _todoRegistUrl = 'user/private/register_todo';
+  final String _todoUrl = 'todo.json';
+
   bool _result = false;
 
   Future _loaded;
@@ -50,5 +53,18 @@ class QueryService {
     return _todoCache == null
     ? _loaded.then((_) => _todoCache)
     : new Future.value(_todoCache);
+  }
+
+  Future<bool> sendTodo(Todo todo) {
+    print(todo.toJson());
+    return _http.post(_todoRegistUrl, todo)
+    .then((HttpResponse response) {
+      print(response.data);
+      return response.data["result"];
+    })
+    .catchError((error) {
+      print(error);
+      return false;
+    });
   }
 }

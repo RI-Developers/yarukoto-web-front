@@ -11,6 +11,12 @@ dependencies:
   sass: any
   angular: '>=1.0.0 <2.0.0'
   web_components: any
+  redstone: '>=0.5.19 <0.6.0'
+  oauth2: '>=0.9.3 <0.10.0'
+  crypto: any
+  mongo_dart: any
+  connection_pool: any
+  shelf_static: any
 dependency_overrides:
   hop: '>=0.27.0'
   dartmocks: any

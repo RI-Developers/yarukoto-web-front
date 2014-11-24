@@ -1,0 +1,19 @@
+<div>
+  <div id="regist_list">
+    <form ng-submit="cmp.addTodo()">
+      <input type="hidden" id="author_name" name="author_name" ng-model="cmp.todo.author_name" value="foo" />
+
+      <div class="content">
+        <label for="title">タイトル</label>
+        <input id="title" type="text" name="title" ng-model="cmp.todo.title" />
+      </div>
+
+      <div class="date">
+        <span><label for="s_s_date">開始予定時刻: </label> <input id="s_s_date" type="text" name="s_s_date" ng-model="cmp.todo.s_s_date" /></span>
+        <span><label for="s_f_date">終了予定時刻: </label><input id="s_f_date" type="text" name="s_f_date" ng-model="cmp.todo.s_f_date" /></span>
+      </div>
+
+      <button id="submit">送信</button>
+    </form>
+  </div>
+</div>

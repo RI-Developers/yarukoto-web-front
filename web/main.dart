@@ -11,12 +11,22 @@ import 'package:Yarukoto/service/query_service.dart';
 import 'package:Yarukoto/component/view_todo_component.dart';
 import 'package:Yarukoto/todo_list.dart';
 
+import 'package:Yarukoto/register_todo/todo_register_form_component.dart';
+
 class YarukotoAppModule extends Module {
   YarukotoAppModule() {
     bind(QueryService);
     bind(ViewTodoComponent);
     bind(TodoListComponent);
+    bind(TodoRegisterFormComponent);
 //    bind(NgRoutingUsePushState, toValue: new NgRoutingUsePushState.value(false));
+  }
+}
+
+class TodoRegisterModule extends Module {
+  TodoRegisterModule() {
+    bind(QueryService);
+    bind(TodoRegisterFormComponent);
   }
 }
 
@@ -30,3 +40,4 @@ void main() {
   .addModule(new YarukotoAppModule())
   .run();
 }
+
