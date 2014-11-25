@@ -4,6 +4,9 @@ import 'package:angular/angular.dart';
 import 'component/view_todo_component.dart';
 import 'service/todo.dart';
 import 'service/query_service.dart';
+import 'user/user_query.dart';
+
+import 'dart:html';
 
 @Component(
   selector: 'todo-list',
@@ -20,6 +23,7 @@ class TodoListComponent {
 
   final Http _http;
   final QueryService queryService;
+  final UserQuery _userQuery;
 
   String message = LOADING_MESSAGE;
   bool todoLoaded = false;
@@ -32,8 +36,14 @@ class TodoListComponent {
   List<Todo> _allTodo = [];
   List<Todo> get allTodo => _allTodo;
 
-  TodoListComponent(this._http, this.queryService) {
-    _loadData();
+  TodoListComponent(this._http, this.queryService, this._userQuery) {
+    _userQuery.isLogin.then((bool isLogin) {
+      if(isLogin) {
+        _loadData();
+      } else {
+        window.location.href = '/#/login';
+      }
+    });
   }
 
   void _loadData() {

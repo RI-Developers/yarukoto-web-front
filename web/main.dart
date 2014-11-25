@@ -13,13 +13,23 @@ import 'package:Yarukoto/todo_list.dart';
 
 import 'package:Yarukoto/register_todo/todo_register_form_component.dart';
 
+import 'package:Yarukoto/user/login/user_login_form_component.dart';
+import 'package:Yarukoto/user/user_query.dart';
+
+
+import 'package:Yarukoto/route/todo_route.dart';
+
 class YarukotoAppModule extends Module {
   YarukotoAppModule() {
     bind(QueryService);
     bind(ViewTodoComponent);
     bind(TodoListComponent);
     bind(TodoRegisterFormComponent);
-//    bind(NgRoutingUsePushState, toValue: new NgRoutingUsePushState.value(false));
+    bind(UserQuery);
+    bind(UserLoginFormComponent);
+
+    bind(RouteInitializerFn, toValue: todoRouteRouteInitializer);
+    bind(NgRoutingUsePushState, toValue: new NgRoutingUsePushState.value(false));
   }
 }
 

@@ -52,3 +52,10 @@ logout() {
   app.request.session.destroy();
   return {"result": true};
 }
+
+@app.Route('/user/logincheck')
+loginCheck() {
+  bool result = app.request.session["username"] != null;
+
+  return {"result": result};
+}
