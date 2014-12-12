@@ -1,12 +1,13 @@
-<div id="todo" ng-if="cmp.todo != null">
+<div id="todo" class="card" ng-if="cmp.todo != null">
   <p id="author">{{cmp.todo.author_name}}</p>
   <hr/>
   <div id="content">
-    <p id="content-text">{{cmp.todo.title}}</p>
-    <p>開始予定日時: {{cmp.todo.s_s_date}}</p>
-    <p>完了予定日時: {{cmp.todo.s_f_date}}</p>
-    <p>終了予定日時: {{cmp.todo.f_date}}</p>
-    <p></p>
+    <p class="content-text">{{cmp.todo.title}}</p>
+    <div class="content-text">開始予定日時: {{cmp.todo.s_s_date}}</div>
+    <div class="content-text">完了予定日時: {{cmp.todo.s_f_date}}</div>
+    <div class="content-text">終了予定日時: {{cmp.todo.f_date}}</div>
   </div>
+  <button type="submit" class="btn todo-done-btn">Done</button>
+  <div class="clear"></div>
 
 </div>

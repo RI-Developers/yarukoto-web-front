@@ -1,14 +1,12 @@
-<div ng-switch="cmp.todoLoaded">
+<div class="card" ng-switch="cmp.todoLoaded">
   <div ng-switch-when="false">
     <p>Now Loading</p>
   </div>
 
   <div id="lists" ng-switch-when="true">
-    <ul>
-      <li ng-repeat="t in cmp.allTodo">
-          <view-todo content="t"></view-todo>
-      </li>
-    </ul>
+    <div ng-repeat="t in cmp.allTodo">
+      <view-todo content="t"></view-todo>
+    </div>
   </div>
 
 </div>
