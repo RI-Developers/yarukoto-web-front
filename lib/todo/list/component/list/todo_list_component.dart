@@ -1,12 +1,12 @@
 library view_task_component;
 
-import '../service/todo.dart';
+import '../../../todo.dart';
 import 'package:angular/angular.dart';
 
 @Component(
   selector: 'view-todo',
-  templateUrl: 'packages/Yarukoto/component/view_todo_component.html',
-  cssUrl: 'packages/Yarukoto/component/view_todo_component.css',
+  templateUrl: 'packages/Yarukoto/todo/list/component/list/todo_list_component.html',
+  cssUrl: 'packages/Yarukoto/todo/list/component/list/todo_list_component.css',
   publishAs: 'cmp',
   map : const{
     'content' : '=>todo_'

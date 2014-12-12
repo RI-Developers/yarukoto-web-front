@@ -1,10 +1,10 @@
 library todo_list_component;
 
 import 'package:angular/angular.dart';
-import 'component/view_todo_component.dart';
-import 'service/todo.dart';
-import 'service/query_service.dart';
-import 'user/user_query.dart';
+import 'component/list/todo_list_component.dart';
+import '../todo.dart';
+import '../todo_query.dart';
+import '../../user/user_query.dart';
 
 import 'dart:html';
 
@@ -22,21 +22,20 @@ class TodoListComponent {
   static const String ERROR_MESSAGE ="Error!";
 
   final Http _http;
-  final QueryService queryService;
+  final TodoQuery todoService;
   final UserQuery _userQuery;
 
   String message = LOADING_MESSAGE;
   bool todoLoaded = false;
 
-  Map<String, Todo> _todoMap = {
-  };
+  Map<String, Todo> _todoMap = {};
 
   Map<String, Todo> get todoMap => _todoMap;
 
   List<Todo> _allTodo = [];
   List<Todo> get allTodo => _allTodo;
 
-  TodoListComponent(this._http, this.queryService, this._userQuery) {
+  TodoListComponent(this._http, this.todoService, this._userQuery) {
     _userQuery.isLogin.then((bool isLogin) {
       if(isLogin) {
         _loadData();
@@ -47,7 +46,7 @@ class TodoListComponent {
   }
 
   void _loadData() {
-    queryService.getAllTodo()
+    todoService.getAllTodo()
     .then((Map<String, Todo> allTodo) {
       _todoMap = allTodo;
       _allTodo = _todoMap.values.toList();

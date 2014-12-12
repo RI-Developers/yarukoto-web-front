@@ -7,11 +7,11 @@ import 'package:angular/angular.dart';
 import 'package:angular/application_factory.dart';
 import 'package:logging/logging.dart';
 
-import 'package:Yarukoto/service/query_service.dart';
-import 'package:Yarukoto/component/view_todo_component.dart';
-import 'package:Yarukoto/todo_list.dart';
+import 'package:Yarukoto/todo/todo_query.dart';
+import 'package:Yarukoto/todo/list/component/list/todo_list_component.dart';
+import 'package:Yarukoto/todo/list/todo_list.dart';
 
-import 'package:Yarukoto/register_todo/todo_register_form_component.dart';
+import 'package:Yarukoto/todo/list/component/register/todo_register_form_component.dart';
 
 import 'package:Yarukoto/user/login/user_login_form_component.dart';
 import 'package:Yarukoto/user/user_query.dart';
@@ -21,7 +21,7 @@ import 'package:Yarukoto/route/todo_route.dart';
 
 class YarukotoAppModule extends Module {
   YarukotoAppModule() {
-    bind(QueryService);
+    bind(TodoQuery);
     bind(ViewTodoComponent);
     bind(TodoListComponent);
     bind(TodoRegisterFormComponent);
